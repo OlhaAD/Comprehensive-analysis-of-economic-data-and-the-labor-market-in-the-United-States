@@ -72,3 +72,63 @@ In the Attribute were found all years from 2000 to 2022 inclusive and 8 unique a
 - Rural_Urban_Continuum_Code Rural-Urban Continuum Code
 - Urban_Influence_Code Urban Influence Code
 - Metro Subway dummy without metro 0 = no metro 1 = metro (based on 2013 OMB metropolitan area delimitation)
+
+## Analysis methodology
+### Data Preprocessing
+
+During the preprocessing of the first database, it was discovered that all column values were non-null, indicating the absence of missing values. An analysis of the uniqueness of FIPS County Code and corresponding County names revealed 99 unique values for each. A verification was conducted, confirming a one-to-one correspondence between FIPS County Code and County, allowing any of these columns to be used as a key. 
+```
+print(df.groupby('FIPS County Code')['County'].nunique().max()) 
+print(df.groupby('County')['FIPS County Code'].nunique().max())
+1
+1
+```
+However, considering that there are counties with identical names in different states in the USA, it was decided to use additional data from the second database, which includes extra attributes like the state name for precise identification.
+
+The second database also showed no missing values. However, the Attribute column, which contained attribute names and years, required additional processing to separate data by years and attributes. Out of eight unique attributes, six (Civilian_labor_force, Employed, Unemployed, Unemployment_rate, Median_Household_Income, Med_HH_Income_Percent_of_State_Total) were selected for relevance to the analysis. The data were transformed into a pivot table pivot_df3, where each attribute became a column, and corresponding values were aggregated.
+
+#### Handling Missing Values
+
+The pivot table pivot_df3 exhibited a significant number of missing values in the columns Median_Household_Income and Med_HH_Income_Percent_of_State_Total. These missing values were replaced with zeros to ensure data integrity for further analysis.
+```
+pivot_df3.fillna(0, inplace=True)
+```
+
+#### Database Merging
+
+To enable a comprehensive analysis, it was necessary to merge data from two distinct sources. The merging process involved the following steps:
+
+1. **Data Merging**: Data from the second database (`pivot_df3`), which contains extended information for each county and year, was merged with the primary dataset (`df2`) using 'FIPS County Code' and 'Fiscal Year' from the first database, and 'FIPS_Code' and 'Year' from the second database. The merge was performed with an `inner` join to ensure that only records present in both tables were included:
+```python
+df2 = df2.merge(pivot_df3, left_on=['FIPS County Code', 'Fiscal Year'], right_on=['FIPS_Code', 'Year'], how='inner')
+```
+2. **Cleaning the Final DataFrame**: After merging, columns that duplicated the merging keys were removed to simplify the data structure and reduce the memory footprint of the DataFrame:
+```python
+df2.drop(['FIPS_Code', 'Year'], axis=1, inplace=True)
+```
+#### Characteristics of the Merged DataFrame:
+- Class: pandas.core.frame.DataFrame
+- Total Entries: 1089 entries
+- Number of Columns: 12 non-null columns
+The DataFrame structure after merging is outlined below:
+
+
+| Index | Column Name                          | Non-Null Count | Data Type |
+|-------|--------------------------------------|----------------|-----------|
+| 0     | Fiscal Year                          | 1089 non-null  | int64     |
+| 1     | County                               | 1089 non-null  | object    |
+| 2     | FIPS County Code                     | 1089 non-null  | int64     |
+| 3     | Computed Tax                         | 1089 non-null  | float64   |
+| 4     | State                                | 1089 non-null  | object    |
+| 5     | Area_Name                            | 1089 non-null  | object    |
+| 6     | Civilian_labor_force                 | 1089 non-null  | float64   |
+| 7     | Employed                             | 1089 non-null  | float64   |
+| 8     | Med_HH_Income_Percent_of_State_Total | 1089 non-null  | float64   |
+| 9     | Median_Household_Income              | 1089 non-null  | float64   |
+| 10    | Unemployed                           | 1089 non-null  | float64   |
+| 11    | Unemployment_rate                    | 1089 non-null  | float64   |
+
+#### Unique Values:
+- Fiscal Years Represented: 2012 to 2022
+- Counties: A diverse range of counties from 'Adair' to 'Wright'.
+- State: All records pertain to Iowa (IA), highlighting the data’s geographic specificity.
