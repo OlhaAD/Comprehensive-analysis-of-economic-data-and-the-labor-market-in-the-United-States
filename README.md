@@ -132,3 +132,24 @@ The DataFrame structure after merging is outlined below:
 - Fiscal Years Represented: 2012 to 2022
 - Counties: A diverse range of counties from 'Adair' to 'Wright'.
 - State: All records pertain to Iowa (IA), highlighting the data’s geographic specificity.
+
+### Data Analysis
+This section outlines the analytical techniques employed to explore relationships and distributions within the dataset. The analysis focuses on uncovering patterns and insights that can inform decision-making processes.
+
+#### Analysis of Unemployment Rate Distribution
+**Normality Testing of the Distribution**
+To test the assumption of normal distribution for the unemployment rate, the following statistical tests were conducted:
+
+- **Shapiro-Wilk Test:** This test helps determine whether the data distribution follows a normal distribution. The results showed a p-value of 0.000, which is significantly below the accepted significance level of 0.05. This indicates that the data do not follow a normal distribution.
+- **D'Agostino's K^2 Test:** Additionally, D'Agostino's K^2 test was conducted, which also confirmed significant deviations from normality (p-value = 0.000). The high test statistic value (24597.513) underscores a significant deviation from the normal distribution.
+**Distribution Visualization**
+To visually corroborate these findings, a histogram of the unemployment rate distribution was plotted:
+
+```python
+sns.histplot(pivot_df3['Unemployment_rate'], kde=True)
+plt.title('Distribution of Unemployment Rate')
+plt.xlabel('Unemployment Rate')
+plt.ylabel('Frequency')
+plt.show()
+```
+![Distribution of Unemployment Rate](https://raw.githubusercontent.com/OlhaAD/Comprehensive-analysis-of-economic-data-and-the-labor-market-in-the-United-States/main/visualizations/DistributionOfUnemploymentRate.png)
