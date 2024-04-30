@@ -235,3 +235,36 @@ Maximum Value: 246.9%
 
 These results provide deeper insights into the economic status of various counties in relation to the overall economic state of the state, as well as the impact of unemployment levels on household incomes.
 **************************************************************************************************************************
+### Analysis of Top 20 Counties by Median Household Income Relative to State Total
+
+In 2021, a detailed analysis was conducted on the top 20 counties with the highest median household income as a percentage of their state's total. This analysis aimed to identify outliers and understand the economic disparities within these regions.
+
+**Methodology**
+The data for the median household income was filtered to focus only on the top 20 counties. These counties were identified as potential outliers from previous scatter plots and boxplots, which suggested significant variations in income levels.
+
+#### Visualizations
+**Bar Chart of Top 20 Counties by Median Household Income as a Percent of State Total for 2021**
+A bar chart was created to visually represent these counties, ranking them by their median household income relative to the state total. This visualization helps in quickly identifying which counties have exceptionally high income levels compared to the rest of their state.
+
+![Top 20 Counties by Median Household Income as a Percent of State Total for 2021](/visualizations/Top20CountiesByMHI2021.png)
+
+**Correlation Analysis of Relationship between Unemployment Rate and Median Household Income Percent of State Total**
+```python
+correlation = top_20_counties['Unemployment_rate'].corr(top_20_counties['Med_HH_Income_Percent_of_State_Total'])
+```
+We calculated the correlation between unemployment rates and median household income within these counties. The result was a correlation coefficient of -0.2137, indicating a slight negative relationship. This suggests that higher unemployment rates in these counties slightly correlate with lower median household incomes as a percentage of the state total.
+
+**Scatter Plot with Regression Line Relationship of Unemployment Rate vs Median Household Income Percent of State Total**
+To further explore this relationship, a scatter plot with a regression line was created. This plot shows the relationship between unemployment rates and median household income percentages. The regression line helps illustrate the overall trend across these counties, confirming the mild negative correlation observed.
+
+![Relationship between Unemployment Rate and Median Household Income Percent of State Total](/visualizations/RelationshipURandMHIinTOP20Counties.png)
+
+#### Findings and Conclusions
+This analysis highlights the significant disparities in income across different counties and the subtle impact of unemployment on income levels. These findings could be crucial for policymakers focusing on economic balance and development in regions with disparate incomes.
+In addition to comparison with unemployment rates, it is important to conduct a contextual analysis: the economic, social and geographical characteristics of these counties can be examined. This may include industrial and economic profile, income distribution, educational attainment, access and quality of healthcare and housing. For example, **Los Alamos,  New Mexico**, ranked first for its high median household income, which can be attributed to several key factors:
+
+- **Highly Paid Workforce:** Los Alamos is home to the Los Alamos National Laboratory, which specializes in advanced scientific and engineering research, particularly in nuclear physics. Most jobs in the area offer high salaries and are linked to federal government or government contracts.
+- **Educational Level:** The educational level in Los Alamos is among the highest in the country. A large proportion of the population has higher education, which correlates with higher wages and a higher standard of living.
+-**Economic Specialization:** The economy of the county is focused on science and technology sectors, which also contributes to the high income level. Scientific and technical industries generally offer high-paying jobs.
+-**Demographic and Social Factors:** The small population size and high standard of living create favorable conditions for maintaining high incomes. Los Alamos also features high living standards and a low poverty rate.
+These factors collectively contribute to Los Alamos maintaining one of the highest median household incomes at the national level.
