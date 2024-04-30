@@ -153,3 +153,28 @@ plt.ylabel('Frequency')
 plt.show()
 ```
 ![Distribution of Unemployment Rate](https://raw.githubusercontent.com/OlhaAD/Comprehensive-analysis-of-economic-data-and-the-labor-market-in-the-United-States/main/visualizations/DistributionOfUnemploymentRate.png)
+
+This histogram shows right-skewed asymmetry, multiple peaks, and a long right tail, which also indicates the presence of outliers and confirms the distribution does not conform to a classic normal distribution.
+
+Based on the analysis conducted, it was decided to use the median instead of the mean for further data analysis of the unemployment rate. This is because the median is less sensitive to outliers and the asymmetry of the distribution. This approach not only enhances the accuracy of the analysis but also provides a more reliable basis for data-driven decision-making.
+
+#### Analysis of Relationship between Employment and Computed Tax by County in IA State
+
+**Correlation Analysis**
+
+In this analysis, we explored the relationship between the number of employed individuals and computed tax in counties across Iowa. We computed a correlation coefficient to quantify the strength of this relationship.
+
+##### Findings:
+- **Correlation Coefficient:** The computed correlation coefficient between the 'Computed Tax' and 'Number of Employed' is `0.9611`, indicating a very strong positive correlation.
+- **Interpretation:** This strong correlation suggests that counties with higher employment levels typically collect higher amounts of tax. This is expected as more employed individuals likely mean more economic activity and, consequently, higher taxable amounts.
+
+##### Visualization
+
+The scatter plot below visualizes this relationship, clearly showing that as the number of employed increases, the computed tax also tends to increase.
+
+![Relationship between Employment and Computed Tax by County in IA State](/visualizations/RelationshipEmloymentComputedTaxIA.png)
+
+This pattern underscores the importance of employment levels as a significant factor in fiscal health at the county level.
+
+The analysis was conducted using merged data from our main employment and taxation databases.
+
