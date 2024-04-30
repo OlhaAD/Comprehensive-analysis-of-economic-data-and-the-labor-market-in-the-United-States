@@ -202,3 +202,36 @@ This visualization demonstrates the median unemployment rate within each tax qua
 
 #### Findings:
 The data suggests that while higher tax quartiles, indicative of higher economic activity, correlate with higher employment, they also slightly elevate unemployment rates. This could reflect more dynamic job markets in economically active counties where higher turnovers and seasonal jobs might inflate unemployment statistics temporarily.
+***************************************************************************************************************************
+### Analysis of Median Household Income as a Percentage of State Total Across Counties for 2021
+
+To assess the relationship between unemployment rates and household median income across various US counties in 2021, data on the percentage of median household income relative to the state median were used.
+
+#### Visualizations
+**Histogram of the Distribution of Median Household Income Percent of State Total**
+The data show that most counties have a median income around the state average, with the majority of values concentrated around 75% to 100% of the state median. The distribution is normal with some outliers, particularly in counties where the median income significantly exceeds the state average.
+
+![Distribution of Median HH Income Percent of State Total across Counties for 2021](/visualizations/DistributionMHICounties2021.png)
+
+**Boxplot of Median Household Incomes Across Counties:**
+The visualization confirms the presence of outliers where the median income in counties is significantly higher than the state average. The majority of the data is concentrated between 75% and 100% of the state median income.
+
+![Boxplot of Median HH Income Percent of State Total across Counties for 2021](/visualizations/BoxplotMHICounties2021.png)
+
+**Scatter Plot of Median Household Income Relative to Unemployment Rate:**
+There is a downward trend, confirming that as the unemployment rate increases, the median household income decreases.
+The data show significant variability, especially at low levels of unemployment, indicating differences in economic conditions across counties.
+
+![Scatter Plot of Unemployment Rate vs. Median Household Income Percent of State Total](/visualizations/ScatterPlotURvsMHI2021.png)
+
+**Statistical Data:**
+Mean: 87.35%
+Standard Deviation: 23.82%
+Minimum Value: 0%
+25th Percentile: 75.7%
+Median (50th Percentile): 86.7%
+75th Percentile: 99.6%
+Maximum Value: 246.9%
+
+These results provide deeper insights into the economic status of various counties in relation to the overall economic state of the state, as well as the impact of unemployment levels on household incomes.
+**************************************************************************************************************************
