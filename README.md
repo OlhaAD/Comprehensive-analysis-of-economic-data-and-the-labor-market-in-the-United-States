@@ -320,3 +320,16 @@ Additionally, we analyze the unemployment rate trends specifically in the states
 
 These visual analyses not only highlight the states with significant employment and unemployment figures but also serve as an essential tool for comparing economic health and labor market dynamics across different regions. These insights are crucial for policymakers, economists, and researchers interested in the labor market's responses to economic changes over the past two decades.
 ****************************************************************************************************************************
+### 2021 U.S. Employment and Unemployment Distribution by State
+#### Visualizations
+**Employment Distribution**
+The pie chart illustrates the distribution of employment across different states in 2021, highlighting the share of employment in each major state and grouping smaller contributions under the "Other" category. California and Texas hold significant portions of the nation’s employment, emphasizing their major roles in the U.S. economy. This distribution helps in understanding the economic activity concentration across the states.
+
+![Employed by State in 2021 (with "Other" category)](/visualizations/EmploymentByState2021.png)
+
+**Unemployment Distribution**
+Similarly, the unemployment distribution pie chart for 2021 shows how unemployment rates are spread across major states, with a significant portion again categorized under "Other" to include states with lesser shares. This chart is particularly useful for identifying regions with higher unemployment challenges and could guide policy focus areas.
+
+![Unemployed by State in 2021 (with "Other" category)](/visualizations/UnemploymentByState2021.png)
+
+****************************************************************************************************************************
