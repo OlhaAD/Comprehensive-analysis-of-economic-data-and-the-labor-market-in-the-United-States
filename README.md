@@ -135,8 +135,8 @@ The DataFrame structure after merging is outlined below:
 
 ### Data Analysis
 This section outlines the analytical techniques employed to explore relationships and distributions within the dataset. The analysis focuses on uncovering patterns and insights that can inform decision-making processes.
-
-#### Analysis of Unemployment Rate Distribution
+***************************************************************************************************************************
+### Analysis of Unemployment Rate Distribution
 **Normality Testing of the Distribution**
 To test the assumption of normal distribution for the unemployment rate, the following statistical tests were conducted:
 
@@ -157,24 +157,48 @@ plt.show()
 This histogram shows right-skewed asymmetry, multiple peaks, and a long right tail, which also indicates the presence of outliers and confirms the distribution does not conform to a classic normal distribution.
 
 Based on the analysis conducted, it was decided to use the median instead of the mean for further data analysis of the unemployment rate. This is because the median is less sensitive to outliers and the asymmetry of the distribution. This approach not only enhances the accuracy of the analysis but also provides a more reliable basis for data-driven decision-making.
-
-#### Analysis of Relationship between Employment and Computed Tax by County in IA State
+*************************************************************************************************************************
+### Analysis of Relationship between Employment and Computed Tax by County in IA State
 
 **Correlation Analysis**
 
 In this analysis, we explored the relationship between the number of employed individuals and computed tax in counties across Iowa. We computed a correlation coefficient to quantify the strength of this relationship.
 
-##### Findings:
+#### Findings:
 - **Correlation Coefficient:** The computed correlation coefficient between the 'Computed Tax' and 'Number of Employed' is `0.9611`, indicating a very strong positive correlation.
 - **Interpretation:** This strong correlation suggests that counties with higher employment levels typically collect higher amounts of tax. This is expected as more employed individuals likely mean more economic activity and, consequently, higher taxable amounts.
 
-##### Visualization
+#### Visualization
 
 The scatter plot below visualizes this relationship, clearly showing that as the number of employed increases, the computed tax also tends to increase.
 
 ![Relationship between Employment and Computed Tax by County in IA State](/visualizations/RelationshipEmloymentComputedTaxIA.png)
 
 This pattern underscores the importance of employment levels as a significant factor in fiscal health at the county level.
-
 The analysis was conducted using merged data from our main employment and taxation databases.
+****************************************************************************************************************************
+### Quartile Analysis of Tax Collections and Employment Levels
 
+This section discusses the relationship between tax collections, employment levels, and unemployment rates across different tax quartiles in Iowa. Tax collections were divided into quartiles to analyze the socio-economic patterns across the state.
+
+**Methodology**
+The dataset was divided into quartiles based on the computed tax to explore variations in employment and unemployment metrics. Each entry was classified into one of four quartiles:
+
+- **1st Quartile:** Lowest tax collections.
+- **2nd Quartile:** Moderate tax collections.
+- **3rd Quartile:** Higher than average tax collections.
+- **4th Quartile:** Highest tax collections.
+
+#### Visualizations
+**Employment Distribution by Tax Quartile**
+This bar chart represents the average number of employed individuals categorized by tax quartile. It clearly shows an increase in employment with higher tax brackets.
+
+![Employed by Tax Quartile](/visualizations/EmployedbyTaxQuartile.png)
+
+**Unemployment Rate by Tax Quartile:**
+This visualization demonstrates the median unemployment rate within each tax quartile. Despite higher employment in the higher quartiles, these also feature marginally higher unemployment rates.
+
+![Unemployment Rate by Tax Quartile](/visualizations/URbyTaxQuartile.png)
+
+#### Findings:
+The data suggests that while higher tax quartiles, indicative of higher economic activity, correlate with higher employment, they also slightly elevate unemployment rates. This could reflect more dynamic job markets in economically active counties where higher turnovers and seasonal jobs might inflate unemployment statistics temporarily.
