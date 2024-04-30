@@ -333,3 +333,10 @@ Similarly, the unemployment distribution pie chart for 2021 shows how unemployme
 ![Unemployed by State in 2021 (with "Other" category)](/visualizations/UnemploymentByState2021.png)
 
 ****************************************************************************************************************************
+### Heatmap of Unemployment Rates by State and Year
+This heatmap provides a visual representation of unemployment rates across various U.S. states from the year 2000 to 2022. Each cell in the heatmap corresponds to a specific state and year, with colors varying according to the unemployment rate—warmer colors indicate higher rates, while cooler colors represent lower rates.
+ ![Unemployment Rates by State and Year](/visualizations/HMUnemploymentRateByStateAndYear.png)
+The visualization clearly shows temporal trends and fluctuations in unemployment rates across different regions, highlighting years of economic downturn or recovery. For instance, high unemployment rates across most states during economic crises can be easily identified.
+
+This comprehensive view aids in understanding how different states have been affected over time and can help policymakers and analysts pinpoint patterns or anomalies in employment trends.
+***************************************************************************************************************************
