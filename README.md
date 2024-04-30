@@ -301,3 +301,22 @@ This line graph illustrates the annual changes in the US unemployment rate from 
 
 The graph provides a visual representation of economic resilience and the challenges faced by the labor market over two decades. Understanding these patterns helps in evaluating the effectiveness of employment policies and economic interventions.
 **************************************************************************************************************************
+### Employment and Unemployment Trends in the Top 10 States
+#### Visualizations
+**Employment Trends by Year in the Top 10 States**
+This visualization illustrates the employment trends from 2000 to 2020 in the top 10 states with the highest employment figures. Each line represents one state, showing the change in the number of employed individuals over the years. The states like California and Texas show a consistent increase in employment, highlighting robust economic growth and job creation.
+
+![Employment Trends by Year in the Top 10 States](/visualizations/EmploymentTrendsByYear.png)
+
+**Unemployment Trends by Year in the Top 10 States**
+Following the employment analysis, we explore the unemployment trends in the same period for the states with the highest numbers of unemployed individuals. The graph details how the unemployment rates have fluctuated, with notable peaks during economic downturns. This visualization helps in understanding the impact of economic changes on job markets in these populous states.
+
+![Unemployment Trends by Year in the Top 10 States](/visualizations/UnemploymentTrendsByYear10Stats.png)
+
+**Unemployment Rate Trends in the Top 10 States**
+Additionally, we analyze the unemployment rate trends specifically in the states with the highest rates. This graph provides a clear picture of how unemployment rates have evolved, peaking particularly during major economic crises.
+
+![Unemployment Rate Trends by Year in the Top 10 States](/visualizations/UnemploymentRateByYear10States.png)
+
+These visual analyses not only highlight the states with significant employment and unemployment figures but also serve as an essential tool for comparing economic health and labor market dynamics across different regions. These insights are crucial for policymakers, economists, and researchers interested in the labor market's responses to economic changes over the past two decades.
+****************************************************************************************************************************
