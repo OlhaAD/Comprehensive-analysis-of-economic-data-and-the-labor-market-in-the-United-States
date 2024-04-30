@@ -268,3 +268,36 @@ In addition to comparison with unemployment rates, it is important to conduct a 
 -**Economic Specialization:** The economy of the county is focused on science and technology sectors, which also contributes to the high income level. Scientific and technical industries generally offer high-paying jobs.
 -**Demographic and Social Factors:** The small population size and high standard of living create favorable conditions for maintaining high incomes. Los Alamos also features high living standards and a low poverty rate.
 These factors collectively contribute to Los Alamos maintaining one of the highest median household incomes at the national level.
+****************************************************************************************************************************
+### US Labor Force Dynamics by Year
+
+This graph depicts the changes in the US labor force dynamics over the years. The data includes three key statistics:
+
+- **Civilian Labor Force**: Represents the total number of people in the United States available for work, including those in jobs and those seeking employment.
+- **Employed**: The segment of the labor force that is currently employed.
+- **Unemployed**: The segment of the labor force that is not employed but actively seeking work.
+
+Here's the visual representation of these trends from 2000 to 2020:
+
+![US Labor Force Dynamics](/visualizations/USLaborForceDynamicsByYear.png)
+
+#### Findings and Key Conclusions
+- The civilian labor force and the number of employed individuals have shown a general increase over the years, reflecting population growth and economic expansion.
+- The number of unemployed shows significant peaks, particularly around the years corresponding to economic recessions, such as the 2008 financial crisis and the 2020 pandemic.
+- The relative stability of employment compared to the fluctuations in unemployment highlights the resilience and recovery capability of the US labor market.
+
+This graph provides a clear overview of how economic policies and market forces have influenced employment trends in the United States over two decades.
+****************************************************************************************************************************
+### US Unemployment Rate by Year
+
+This line graph illustrates the annual changes in the US unemployment rate from 2000 to 2020. The data points clearly delineate the fluctuations in unemployment, highlighting economic downturns and recoveries.
+
+![US Unemployment Rate by Year](/visualizations/USUnempoloymentRateByYear.png)
+
+#### Findings and Key Conclusions
+- A noticeable peak in unemployment occurred around 2010, coinciding with the aftermath of the 2008 financial crisis, reflecting its profound impact on the labor market.
+- The unemployment rate gradually decreased from 2010 onwards as the economy recovered, reaching historic lows just before 2020.
+- The sharp spike in 2020 represents the dramatic effect of the COVID-19 pandemic on the US labor market, showcasing how external shocks can lead to rapid increases in unemployment.
+
+The graph provides a visual representation of economic resilience and the challenges faced by the labor market over two decades. Understanding these patterns helps in evaluating the effectiveness of employment policies and economic interventions.
+**************************************************************************************************************************
