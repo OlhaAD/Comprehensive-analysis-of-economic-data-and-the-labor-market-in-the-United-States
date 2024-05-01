@@ -203,6 +203,32 @@ This visualization demonstrates the median unemployment rate within each tax qua
 #### Findings:
 The data suggests that while higher tax quartiles, indicative of higher economic activity, correlate with higher employment, they also slightly elevate unemployment rates. This could reflect more dynamic job markets in economically active counties where higher turnovers and seasonal jobs might inflate unemployment statistics temporarily.
 ***************************************************************************************************************************
+### Computed Tax Contributions by Top Counties in IA State
+This section of the analysis focuses on understanding the distribution of tax contributions across counties over several years. Here’s how the data was processed and visualized:
+
+- **Data Aggregation:** For each year, we aggregated the computed tax for each county to get a yearly total per county.
+```python
+heatmap_county_tax = df2.pivot_table(index='Fiscal Year', columns='County', values='Computed Tax', aggfunc='sum')
+total_tax_per_year = heatmap_county_tax.sum(axis=1)
+```
+- **Percentage Calculation:** We then calculated each county's tax contributions as a percentage of the total tax collected each year. This helps in understanding the relative contribution of each county compared to the total.
+```python
+tax_percentage = heatmap_county_tax.divide(total_tax_per_year, axis=0) * 100
+tax_percentage_rounded = tax_percentage.round(2)
+```
+- **Averaging Percentages:** To get a consistent measure across years, we calculated the average percentage contribution for each county over the observed years.
+```python
+average_tax_percentage_by_county = tax_percentage_rounded.mean(axis=0)
+```
+- **Top Counties Selection:** From this dataset, we identified the top 20 counties with the highest average percentage contributions to computed tax.
+```python
+top_20_counties = average_tax_percentage_by_county.nlargest(20)
+```
+
+A heatmap visualization was created to display these top 20 counties computed tax contributions across different years. This allows for a quick visual assessment of which counties have consistently been the largest contributors to the tax base.
+![Computed Tax by 20 TOP County in IA State and Fiscal Yea](/visualizations/PercentTaxByCountyAndYearTop20.png)
+This analysis is crucial for policymakers and economic planners to identify key areas contributing to the fiscal health of the region and to make informed decisions about resource allocation and development planning.
+***************************************************************************************************************************
 ### Analysis of Median Household Income as a Percentage of State Total Across Counties for 2021
 
 To assess the relationship between unemployment rates and household median income across various US counties in 2021, data on the percentage of median household income relative to the state median were used.
@@ -340,3 +366,8 @@ The visualization clearly shows temporal trends and fluctuations in unemployment
 
 This comprehensive view aids in understanding how different states have been affected over time and can help policymakers and analysts pinpoint patterns or anomalies in employment trends.
 ***************************************************************************************************************************
+### Contact
+
+For any further inquiries or to discuss this analysis, please feel free to contact:
+Olha Danylchenko
+dolga334320@gmail.com
