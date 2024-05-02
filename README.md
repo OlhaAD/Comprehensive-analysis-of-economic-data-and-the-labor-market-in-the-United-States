@@ -303,7 +303,7 @@ This graph depicts the changes in the US labor force dynamics over the years. Th
 - **Employed**: The segment of the labor force that is currently employed.
 - **Unemployed**: The segment of the labor force that is not employed but actively seeking work.
 
-Here's the visual representation of these trends from 2000 to 2020:
+Here's the visual representation of these trends from 2000 to 2022:
 
 ![US Labor Force Dynamics](/visualizations/USLaborForceDynamicsByYear.png)
 
@@ -316,7 +316,7 @@ This graph provides a clear overview of how economic policies and market forces 
 ****************************************************************************************************************************
 ### US Unemployment Rate by Year
 
-This line graph illustrates the annual changes in the US unemployment rate from 2000 to 2020. The data points clearly delineate the fluctuations in unemployment, highlighting economic downturns and recoveries.
+This line graph illustrates the annual changes in the US unemployment rate from 2000 to 2022. The data points clearly delineate the fluctuations in unemployment, highlighting economic downturns and recoveries.
 
 ![US Unemployment Rate by Year](/visualizations/USUnempoloymentRateByYear.png)
 
@@ -330,7 +330,7 @@ The graph provides a visual representation of economic resilience and the challe
 ### Employment and Unemployment Trends in the Top 10 States
 #### Visualizations
 **Employment Trends by Year in the Top 10 States**
-This visualization illustrates the employment trends from 2000 to 2020 in the top 10 states with the highest employment figures. Each line represents one state, showing the change in the number of employed individuals over the years. The states like California and Texas show a consistent increase in employment, highlighting robust economic growth and job creation.
+This visualization illustrates the employment trends from 2000 to 2022 in the top 10 states with the highest employment figures. Each line represents one state, showing the change in the number of employed individuals over the years. The states like California and Texas show a consistent increase in employment, highlighting robust economic growth and job creation.
 
 ![Employment Trends by Year in the Top 10 States](/visualizations/EmploymentTrendsByYear.png)
 
