@@ -8,7 +8,7 @@ This project is an analysis of labor market data in the United States. The analy
 4. Install the required dependencies using `pip install -r requirements.txt` (assuming you have created a requirements.txt file listing all the libraries).
 
 ## Input data
-Data taken from (https://catalog.data.gov/) and https://www.ers.usda.gov/.
+Data taken from https://catalog.data.gov/ and https://www.ers.usda.gov/.
 
 ## Objectives and basic data of the project
 ### Goals and objectives
